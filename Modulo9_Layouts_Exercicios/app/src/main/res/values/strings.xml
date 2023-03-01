@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Modulo9_Layouts_Exercicios_</string>
+    <string name="nome">HEITOR DO CARMO SOARES</string>
+    <string name="celular">(21)99645-1569</string>
+    <string name="email">heitor.c.soares@gmail.com</string>
+    <string name="endereco">Rua Presidente Antonio Carlos, 475 \n Duque de Caxias - RJ</string>
+    <string name="github">github.com/heitorcsoares</string>
+    <string name="instagram">instagram.com/pignus.ti/</string>
+</resources>

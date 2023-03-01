@@ -1,0 +1,22 @@
+<resources>
+    <style name="destaque">
+        <item name="android:textSize">7pt</item>
+        <item name="android:textColor">#FFFFFF</item>
+    </style>
+
+    <style name="texto">
+        <item name="android:textSize">7pt</item>
+        <item name="android:textColor">#1B627B</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="texto2">
+        <item name="android:textSize">7pt</item>
+        <item name="android:textColor">#FF0000</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="titulo">
+        <item name="android:textSize">8pt</item>
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+</resources>
