@@ -6,6 +6,7 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView.Adapter
 import com.example.modulo10_exercicio.databinding.ActivityMainBinding
 import com.google.android.material.snackbar.Snackbar
 
@@ -47,10 +48,15 @@ class MainActivity : AppCompatActivity(), ListAdapter.ListAdapterListener {
         var phonee: String = editPhonee?.text.toString()
 
         itemList.add(ListItem(name, birth, phonee))
+        //notifyDataSetChanged()
+
         val listUltimo = itemList.last().name
 
-        //ListAdapter.notifyDataSetChanged()
         Toast.makeText(this, "Contato: $listUltimo", Toast.LENGTH_SHORT).show()
+
+        editName?.setText("")
+        editBirth?.setText("")
+        editPhonee?.setText("")
     }
 
     private fun createMockDate(){                                                       //Adicioando Itens a lista(itemList).
