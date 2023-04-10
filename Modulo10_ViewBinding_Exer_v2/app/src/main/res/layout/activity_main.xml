@@ -19,10 +19,12 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/lista"
         android:layout_width="0dp"
-        android:layout_height="300dp"
+        android:layout_height="0dp"
         android:layout_marginStart="15dp"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="10dp"
         android:layout_marginEnd="15dp"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/textView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView"
@@ -47,95 +49,95 @@
         android:layout_width="0dp"
         android:layout_height="48dp"
         android:layout_marginStart="15dp"
-        android:layout_marginTop="10dp"
         android:layout_marginEnd="15dp"
+        android:layout_marginBottom="15dp"
         android:text="GRAVAR"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textPhone" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/textName"
         android:layout_width="90dp"
         android:layout_height="37dp"
         android:layout_marginStart="15dp"
-        android:layout_marginTop="15dp"
+        android:layout_marginBottom="10dp"
         android:gravity="center_vertical"
         android:text="Nome"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintBottom_toTopOf="@+id/textBirth"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/textBirth"
         android:layout_width="90dp"
         android:layout_height="37dp"
         android:layout_marginStart="15dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
         android:gravity="center_vertical"
         android:text="Nascimento"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textName" />
+        app:layout_constraintBottom_toTopOf="@+id/textPhone"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/textPhone"
         android:layout_width="90dp"
         android:layout_height="37dp"
         android:layout_marginStart="15dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
         android:gravity="center_vertical"
         android:text="Telefone"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textBirth" />
+        app:layout_constraintBottom_toTopOf="@+id/button"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
         android:id="@+id/editName"
         android:layout_width="0dp"
         android:layout_height="37dp"
-        android:layout_marginTop="15dp"
         android:layout_marginEnd="15dp"
+        android:layout_marginBottom="10dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/editBirth"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textName"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintStart_toEndOf="@+id/textName" />
 
     <EditText
         android:id="@+id/editBirth"
         android:layout_width="0dp"
         android:layout_height="37dp"
-        android:layout_marginTop="10dp"
         android:layout_marginEnd="15dp"
+        android:layout_marginBottom="10dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/editPhonee"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textBirth"
-        app:layout_constraintTop_toBottomOf="@+id/editName" />
+        app:layout_constraintStart_toEndOf="@+id/textBirth" />
 
     <EditText
         android:id="@+id/editPhonee"
         android:layout_width="0dp"
         android:layout_height="37dp"
-        android:layout_marginTop="10dp"
         android:layout_marginEnd="15dp"
+        android:layout_marginBottom="10dp"
         android:ems="10"
         android:inputType=""
         android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/button"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textPhone"
-        app:layout_constraintTop_toBottomOf="@+id/editBirth" />
+        app:layout_constraintStart_toEndOf="@+id/textPhone" />
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="11dp"
+        android:layout_marginBottom="12dp"
         android:gravity="center"
-        android:text="*************************************************************"
+        android:text="***************************************"
+        app:layout_constraintBottom_toTopOf="@+id/editName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.487"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/lista" />
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
