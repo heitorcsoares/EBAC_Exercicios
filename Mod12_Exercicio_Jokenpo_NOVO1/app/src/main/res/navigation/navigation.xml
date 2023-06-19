@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.mod12_exercicio_jokenpo.homeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_navigation2"
+            app:destination="@id/Navigation2" />
+    </fragment>
+    <navigation android:id="@+id/Navigation2"
+        app:startDestination="@id/resultadoFragment">
+        <fragment
+            android:id="@+id/resultadoFragment"
+            android:name="com.example.mod12_exercicio_jokenpo.resultadoFragment"
+            android:label="resultado"
+            tools:layout="@layout/fragment_resultado" />
+        <fragment
+            android:id="@+id/jogadorFragment"
+            android:name="com.example.mod12_exercicio_jokenpo.jogadorFragment"
+            android:label="jogador"
+            tools:layout="@layout/fragment_jogador" />
+    </navigation>
+</navigation>
