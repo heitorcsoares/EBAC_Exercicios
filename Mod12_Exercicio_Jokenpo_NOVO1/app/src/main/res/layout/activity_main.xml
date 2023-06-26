@@ -14,18 +14,19 @@
 
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbar"
+            style="@style/toolbar"
             android:layout_width="0dp"
             android:layout_height="56dp"
-            android:background="?attr/colorPrimary"
+            android:gravity="center"
             android:minHeight="?attr/actionBarSize"
-            android:theme="?attr/actionBarTheme"
+            app:navigationIcon="@drawable/ic_baseline_menu_24"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <androidx.fragment.app.FragmentContainerView
             android:id="@+id/fragmentContainerView"
-            android:name="com.example.mod12_exercicio_jokenpo.homeFragment"
+            android:name="androidx.navigation.fragment.NavHostFragment"
             android:layout_width="0dp"
             android:layout_height="0dp"
             app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
@@ -36,6 +37,7 @@
 
         <com.google.android.material.bottomnavigation.BottomNavigationView
             android:id="@+id/bottomNavigationView"
+            style="@style/bottomNav"
             android:layout_width="0dp"
             android:layout_height="56dp"
             app:elevation="8dp"

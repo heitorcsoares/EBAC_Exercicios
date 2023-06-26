@@ -20,7 +20,7 @@ import com.google.android.material.navigation.NavigationView
 import com.google.android.material.snackbar.Snackbar
 
 class MainActivity : AppCompatActivity() {
-    lateinit var drawer: DrawerLayout                               //Activity_main2.xml tem que estar <androidx.drawerlayout.widget.DrawerLayout xmlns:... na primeira linha
+    lateinit var drawer: DrawerLayout                               //activity_main.xml tem que estar <androidx.drawerlayout.widget.DrawerLayout xmlns:... na primeira linha como tipo de layout.
     lateinit var navDrawer: NavigationView
     lateinit var bottomNav: BottomNavigationView                   //(barra de navegação - inferior da tela)
     lateinit var navController : NavController
@@ -32,8 +32,8 @@ class MainActivity : AppCompatActivity() {
         val binding = ActivityMainBinding.inflate(layoutInflater)   //infla o layoutl.xml  [ActivityMainBinding] Classe gerada automaticamente  [layoutInflater] Objeto
         val toolbar = binding.toolbar
 
-        setContentView(binding.root)                                //[setContentView] Define o conteudo da Activity  [binding.root] Visualização Raiz de um Layout que é inflado usando vinculação de dados.
-        setSupportActionBar(binding.toolbar)                       //toolbar -> configura para ter acesso direto (supportActionBar)
+        setContentView(binding.root)                 //[setContentView] Define o conteudo da Activity  [binding.root] Visualização Raiz de um Layout que é inflado usando vinculação de dados.
+        setSupportActionBar(binding.toolbar)         //toolbar -> configura para ter acesso direto (supportActionBar)
 
         drawer = binding.root
         navDrawer = binding.navView

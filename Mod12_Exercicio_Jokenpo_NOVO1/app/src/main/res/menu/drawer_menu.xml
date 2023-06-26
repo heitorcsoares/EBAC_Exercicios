@@ -3,9 +3,11 @@
 
     <item
         android:id="@+id/jogadorFragment"
+        android:icon="@drawable/ic_jogador"
         android:title="Jogador 1"/>
     <item
-        android:id="@+id/resultadoFragmentFragment"
+        android:id="@+id/resultadoFragment"
+        android:icon="@drawable/ic_resultado"
         android:title="Resultado"/>
 
 </menu>

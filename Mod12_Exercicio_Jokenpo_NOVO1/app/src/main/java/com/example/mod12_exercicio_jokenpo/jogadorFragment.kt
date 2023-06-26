@@ -8,8 +8,13 @@ import android.view.MenuInflater
 import android.view.MenuItem
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ArrayAdapter
+import android.widget.Spinner
+import androidx.lifecycle.MutableLiveData
+import androidx.navigation.fragment.NavHostFragment.findNavController
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.ui.onNavDestinationSelected
+import com.example.mod12_exercicio_jokenpo.databinding.ActivityMainBinding
 import com.example.mod12_exercicio_jokenpo.databinding.FragmentJogadorBinding
 import com.google.android.material.snackbar.Snackbar
 

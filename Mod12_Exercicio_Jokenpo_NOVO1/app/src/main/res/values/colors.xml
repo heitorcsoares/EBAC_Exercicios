@@ -1,19 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
 
-    <color name="colorPrimary">#778c90</color>
-    <color name="colorPrimaryDark">#829399</color>
-    <color name="colorAccent">#829399</color>
     <color name="buttomColorBackground">#778c90</color>
-
-    <color name="colorPrimaryContainer">#FF000000</color>
-    <color name="colorOnPrimaryContainer">#829399</color>
-
 
     <color name="colorTextView">#829399</color>
     <color name="colorTextViewDark">#829399</color>
-
 
     <color name="colorTextTitulo">#778c90</color>
     <color name="colorText">#829399</color>
@@ -22,5 +15,15 @@
     <!-- Paleta do Aplicativo -->
     <color name="grayToolTitleBottom">#778c90</color>
     <color name="grayText">#829399</color>
-    <color name="white">#FFFFFFFF</color>
+    <color name="header">#e0e0e0</color>
+    <color name="spinner">#d0d8dd</color>
 </resources>
+
+<!--
+    <color name="colorPrimary">#778c90</color>
+    <color name="colorPrimaryDark">#778c90</color>
+    <color name="colorAccent">#778c90</color>
+
+    <color name="colorPrimaryContainer">#FF000000</color>
+    <color name="colorOnPrimaryContainer">#829399</color>
+-->

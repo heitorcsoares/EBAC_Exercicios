@@ -1,18 +1,12 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <!-- Tema base do aplicativo. -->
 
-    <!-- Personalize seu tema de luz (DayNight) aqui. -->
-    <style name="Base.Theme.Mod12_Exercicio_Jokenpo" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+    <style name="Theme.Mod12_Exercicio_Jokenpo" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimaryContainer">@color/grayToolTitleBottom</item>
+        <item name="colorOnPrimaryContainer">@color/grayToolTitleBottom</item>
         <item name="android:statusBarColor">@color/grayToolTitleBottom</item>
-        <item name="android:navigationBarColor">@color/grayToolTitleBottom</item>
-
-        <item name="colorPrimaryContainer">@color/colorPrimaryContainer</item>
-        <item name="colorOnPrimaryContainer">@color/colorOnPrimaryContainer</item>
-    </style>
-
-
-    <style name="Theme.Mod12_Exercicio_Jokenpo" parent="Base.Theme.Mod12_Exercicio_Jokenpo">
+        <item name="android:navigationBarColor">#d0d8dd</item>
 
     </style>
+
 </resources>
+
