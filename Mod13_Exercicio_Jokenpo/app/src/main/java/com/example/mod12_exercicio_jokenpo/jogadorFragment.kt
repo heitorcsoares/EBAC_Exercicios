@@ -22,6 +22,7 @@ import com.google.android.material.snackbar.Snackbar
 
 class jogadorFragment : Fragment() {
     lateinit var root: View
+    lateinit var selecionarJogada: Spinner
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -36,11 +37,23 @@ class jogadorFragment : Fragment() {
         val binding = FragmentJogadorBinding.inflate(inflater,container,false)
         root = binding.root
 
+        selecionarJogada = binding.spinner
+
+        configSelecaoSpinner()
+
         setHasOptionsMenu(true)
 
         Log.d("LifeCycle","onCreateView - OK")
 
         return root
+    }
+
+    private fun configSelecaoSpinner(){
+        val adapter = ArrayAdapter.createFromResource(requireContext(), R.array.spinners, android.R.layout.simple_spinner_item)
+
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+
+        selecionarJogada.adapter = adapter
     }
 
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
