@@ -1,5 +1,3 @@
-import org.jetbrains.kotlin.storage.CacheResetOnProcessCanceled.enabled
-
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
@@ -37,9 +35,10 @@ android {
         jvmTarget = "17"
     }
 
-    dataBinding{
-        enabled = true
+    buildFeatures {
+        dataBinding = true
     }
+
 }
 
 dependencies {
