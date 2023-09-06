@@ -8,8 +8,8 @@
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
-        android:layout_width="409dp"
-        android:layout_height="wrap_content"
+        android:layout_width="0dp"
+        android:layout_height="55dp"
         android:background="?attr/colorPrimary"
         android:minHeight="?attr/actionBarSize"
         android:theme="?attr/actionBarTheme"
@@ -17,14 +17,12 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <androidx.fragment.app.FragmentContainerView
-        android:id="@+id/fragmentContainerView"
-        android:name="com.example.filmes_play.a_FilmesItemFragment"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/fragmentContContainerView"
+        android:layout_width="409dp"
+        android:layout_height="674dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/toolbar" />
-
 </androidx.constraintlayout.widget.ConstraintLayout>
