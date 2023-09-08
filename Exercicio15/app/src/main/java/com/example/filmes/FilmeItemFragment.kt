@@ -8,13 +8,14 @@ import androidx.recyclerview.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.navigation.navGraphViewModels
 import com.example.filmes.placeholder.PlaceholderContent
 
+/**
+ * A fragment representing a list of Items.
+ */
 class FilmeItemFragment : Fragment() {
 
     private var columnCount = 1
-    private val viewModel by navGraphViewModels<FilmeViewModel>(R.id.filme_graph){defaultViewModelProviderFactory}
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
