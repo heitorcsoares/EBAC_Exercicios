@@ -14,7 +14,7 @@ import com.example.filmes.placeholder.PlaceholderContent
  * A fragment representing a list of Items.
  */
 class FilmeItemFragment : Fragment() {
-
+    lateinit var root: View
     private var columnCount = 1
 
     override fun onCreate(savedInstanceState: Bundle?) {
