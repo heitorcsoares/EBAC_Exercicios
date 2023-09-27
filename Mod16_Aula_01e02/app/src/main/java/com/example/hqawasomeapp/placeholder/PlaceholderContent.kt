@@ -12,7 +12,7 @@ object PlaceholderContent {
     private val COUNT = 25
 
     init {
-        // Add some sample items.
+        // Adiciona itens de amostra.
         for (i in 1..COUNT) {
             addItem(createPlaceholderItem(i))
         }
@@ -36,6 +36,7 @@ object PlaceholderContent {
         return builder.toString()
     }
 
+    /** Um item de espaço reservado que representa uma parte do conteúdo.  */
     data class PlaceholderItem(val id: String, val content: String, val details: String) {
         override fun toString(): String = content
     }

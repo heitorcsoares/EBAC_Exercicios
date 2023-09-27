@@ -4,8 +4,8 @@ import androidx.lifecycle.ViewModel
 
 class HQViewModel : ViewModel() {
 
-    fun loadHQDetails() : HQDetails{
-        return HQDetails("Minha HQ", "Este é apenas um conteudo de teste.")
+    /**Função para carregar conteudo. Tipo [HQDetails.kt]*/
+    fun loadHQDetails(): HQDetails {
+        return HQDetails("Minha HQ", "Este apenas contéudo fixo")
     }
-
 }
