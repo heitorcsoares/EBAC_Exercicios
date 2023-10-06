@@ -2,23 +2,24 @@ package com.example.filmes
 
 import androidx.recyclerview.widget.RecyclerView
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
-
+import androidx.fragment.app.Fragment
+import androidx.navigation.findNavController
 import com.example.filmes.placeholder.PlaceholderContent.PlaceholderItem
 import com.example.filmes.databinding.FragmentItemBinding
 
-/**
- * [RecyclerView.Adapter] that can display a [PlaceholderItem].
- * TODO: Replace the implementation with code for your data type.
- */
+/** Mantem a (Interface) depois dos (import) */
+interface FilmeItemListener {
+    fun onItemSelected(position: Int)
+}
+
 class MyfilmeRecyclerViewAdapter(
-    private val values: List<PlaceholderItem>
+    private val values: List<PlaceholderItem>,
+    private val listener: FilmeItemListener,                    //Adiciona ouvinte como um parâmetro do construtor
+    private val fragment: Fragment
 ) : RecyclerView.Adapter<MyfilmeRecyclerViewAdapter.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-
         return ViewHolder(
             FragmentItemBinding.inflate(
                 LayoutInflater.from(parent.context),
@@ -26,24 +27,29 @@ class MyfilmeRecyclerViewAdapter(
                 false
             )
         )
-
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val item = values[position]
-        holder.idView.text = item.id
-        holder.contentView.text = item.content
+
+        holder.bindItem(item)           /** Chama função (bindItem->Inner class|MyhqRecyclerViewAdapter.kt) */
+
+        /** ação para escutar click */
+        holder.itemView.setOnClickListener {
+            listener.onItemSelected(position)
+
+            /** Inicie a ação de navegação para a tela de detalhes */
+            holder.itemView.findNavController().navigate(R.id.action_filmeItemFragment_to_filmeDetalhesFragment)
+        }
     }
 
     override fun getItemCount(): Int = values.size
 
-    inner class ViewHolder(binding: FragmentItemBinding) : RecyclerView.ViewHolder(binding.root) {
-        val idView: TextView = binding.itemNumero
-        val contentView: TextView = binding.conteudo
-
-        override fun toString(): String {
-            return super.toString() + " '" + contentView.text + "'"
+    inner class ViewHolder(private val binding: FragmentItemBinding) : RecyclerView.ViewHolder(binding.root) {
+        fun bindItem(item: PlaceholderItem){
+            binding.filmeItem.text = item.content                //filmeItem-> Variavel (fragment_item | Data)
+            binding.filmeConteudo.text = item.details            //filmeConteudo-> Variavel (fragment_item | Data)
+            binding.executePendingBindings()
         }
     }
-
 }

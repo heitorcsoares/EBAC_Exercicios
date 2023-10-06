@@ -3,28 +3,16 @@ package com.example.filmes.placeholder
 import java.util.ArrayList
 import java.util.HashMap
 
-/**
- * Helper class for providing sample content for user interfaces created by
- * Android template wizards.
- *
- * TODO: Replace all uses of this class before publishing your app.
- */
 object PlaceholderContent {
 
-    /**
-     * An array of sample (placeholder) items.
-     */
     val ITEMS: MutableList<PlaceholderItem> = ArrayList()
 
-    /**
-     * A map of sample (placeholder) items, by ID.
-     */
     val ITEM_MAP: MutableMap<String, PlaceholderItem> = HashMap()
 
-    private val COUNT = 25
+    private val COUNT = 10
 
     init {
-        // Add some sample items.
+        /** Adicione itens. */
         for (i in 1..COUNT) {
             addItem(createPlaceholderItem(i))
         }
@@ -36,21 +24,17 @@ object PlaceholderContent {
     }
 
     private fun createPlaceholderItem(position: Int): PlaceholderItem {
-        return PlaceholderItem(position.toString(), "Texto para teste no Corpo da Descrição do Filme " + position, makeDetails(position))
+        return PlaceholderItem(position.toString(), "Item • " + position, makeDetails(position))
     }
 
     private fun makeDetails(position: Int): String {
         val builder = StringBuilder()
-        builder.append("Details about Item: ").append(position)
-        for (i in 0..position - 1) {
-            builder.append("\nMore details information here.")
-        }
+        builder.append("Detalhes sobre item: ").append(position)
+        builder.append("\nMais informações detalhadas aqui.")
+        //for (i in 0..position - 1) { builder.append("\nMais informações detalhadas aqui.") }
         return builder.toString()
     }
 
-    /**
-     * A placeholder item representing a piece of content.
-     */
     data class PlaceholderItem(val id: String, val content: String, val details: String) {
         override fun toString(): String = content
     }

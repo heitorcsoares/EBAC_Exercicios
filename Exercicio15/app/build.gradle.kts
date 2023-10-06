@@ -6,7 +6,7 @@ plugins {
 
 android {
     namespace = "com.example.filmes"
-    compileSdk = 33
+    compileSdk = 34
 
     defaultConfig {
         applicationId = "com.example.filmes"
@@ -34,6 +34,10 @@ android {
     kotlinOptions {
         jvmTarget = "17"
     }
+    /**HABILIDAR dataBinding*/
+    dataBinding {
+        enable = true
+    }
     buildFeatures {
         viewBinding = true
     }
@@ -58,11 +62,12 @@ dependencies {
     implementation("androidx.core:core-ktx:1.10.1")
 
     // navigation components
-    implementation("androidx.navigation:navigation-fragment-ktx:2.4.1")
-    implementation("androidx.navigation:navigation-ui-ktx:2.4.1")
+    implementation("androidx.navigation:navigation-fragment-ktx:2.7.3")
+    implementation("androidx.navigation:navigation-ui-ktx:2.7.3")
 
     // UI
     implementation("com.google.android.material:material:1.9.0")
     implementation("androidx.constraintlayout:constraintlayout:2.1.4")
     implementation("androidx.recyclerview:recyclerview:1.3.1")
+    implementation("org.imaginativeworld.whynotimagecarousel:whynotimagecarousel:2.1.0")        //Carousel de imagens
 }

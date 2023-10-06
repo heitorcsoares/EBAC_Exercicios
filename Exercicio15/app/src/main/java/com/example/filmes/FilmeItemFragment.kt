@@ -8,14 +8,13 @@ import androidx.recyclerview.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.navGraphViewModels
 import com.example.filmes.placeholder.PlaceholderContent
 
-/**
- * A fragment representing a list of Items.
- */
-class FilmeItemFragment : Fragment() {
-    lateinit var root: View
+class FilmeItemFragment : Fragment(), FilmeItemListener {
+
     private var columnCount = 1
+    private val viewModel by navGraphViewModels<FilmeViewModel>(R.id.filmes_graph){defaultViewModelProviderFactory}
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -31,14 +30,15 @@ class FilmeItemFragment : Fragment() {
     ): View? {
         val view = inflater.inflate(R.layout.fragment_item_list, container, false)
 
-        // Set the adapter
+        /** configurando adapter */
         if (view is RecyclerView) {
+            val adapter = MyfilmeRecyclerViewAdapter(PlaceholderContent.ITEMS, this, requireParentFragment())   /**this -> referencia de instancia da Classe FilmesItemListener */
             with(view) {
                 layoutManager = when {
                     columnCount <= 1 -> LinearLayoutManager(context)
                     else -> GridLayoutManager(context, columnCount)
                 }
-                adapter = MyfilmeRecyclerViewAdapter(PlaceholderContent.ITEMS)
+                this.adapter = adapter
             }
         }
         return view
@@ -46,10 +46,8 @@ class FilmeItemFragment : Fragment() {
 
     companion object {
 
-        // TODO: Customize parameter argument names
         const val ARG_COLUMN_COUNT = "column-count"
 
-        // TODO: Customize parameter initialization
         @JvmStatic
         fun newInstance(columnCount: Int) =
             FilmeItemFragment().apply {
@@ -58,4 +56,8 @@ class FilmeItemFragment : Fragment() {
                 }
             }
     }
+
+    /** Função original (MyfilmeRecyclerViewAdapter | interface)  */
+    override fun onItemSelected(position: Int) {   }
+
 }
