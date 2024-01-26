@@ -9,7 +9,7 @@ object PlaceholderContent {
 
     val ITEM_MAP: MutableMap<String, PlaceholderItem> = HashMap()
 
-    private val COUNT = 11
+    private val COUNT = 10
 
     init {
         /** Adicione itens. */
@@ -30,15 +30,11 @@ object PlaceholderContent {
     private fun makeDetails(position: Int): String {
         val builder = StringBuilder()
         builder.append("Detalhes sobre item: ").append(position)
-
-        for (i in 0..position - 1) {
-            builder.append("\nMais informações detalhadas aqui.")
-        }
-
+        builder.append("\nMais informações detalhadas aqui.")
+        //for (i in 0..position - 1) { builder.append("\nMais informações detalhadas aqui.") }
         return builder.toString()
     }
 
-    /** Um item de espaço reservado que representa uma parte do conteúdo.  */
     data class PlaceholderItem(val id: String, val content: String, val details: String) {
         override fun toString(): String = content
     }

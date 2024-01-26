@@ -5,8 +5,8 @@
 
     <data>
         <variable
-            name="viewModel"
-            type="com.example.filmes.FilmeViewModel" />
+            name="filmeDetalhes"
+            type="com.example.filmes.FilmeDetalhes" />
     </data>
 
     <FrameLayout
@@ -17,7 +17,8 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            tools:context=".FilmeDetalhesFragment">
+            tools:context=".FilmeDetalhesFragment"
+            android:background="@android:color/white">
 
             <ImageView
                 android:id="@+id/imageView"
@@ -34,7 +35,7 @@
                 android:layout_height="30dp"
                 android:layout_marginTop="20dp"
                 android:textAlignment="center"
-                android:text="@{viewModel.loadFilmeDetalhes().title}"
+                android:text="@{filmeDetalhes.title}"
                 android:textColor="@color/cor01"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
@@ -47,7 +48,7 @@
                 android:layout_height="28dp"
                 android:layout_marginTop="10dp"
                 android:textAlignment="center"
-                android:text="@{viewModel.loadFilmeDetalhes().content}"
+                android:text="@{filmeDetalhes.content}"
                 android:textColor="@color/cor01"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"

@@ -23,7 +23,8 @@
                 android:id="@+id/back"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:backgroundTint="#FDFDFD">
+                android:backgroundTint="#FDFDFD"
+                android:background="@android:color/white">
 
                 <ImageView
                     android:id="@+id/imageView3"
@@ -49,7 +50,7 @@
                     app:layout_constraintStart_toStartOf="parent" />
 
                 <TextView
-                    android:id="@+id/filmeItem"
+                    android:id="@+id/titulo"
                     android:layout_width="wrap_content"
                     android:layout_height="25dp"
                     android:layout_margin="@dimen/text_margin"
@@ -63,7 +64,7 @@
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
-                    android:id="@+id/filmeConteudo"
+                    android:id="@+id/conteudo"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_margin="@dimen/text_margin"

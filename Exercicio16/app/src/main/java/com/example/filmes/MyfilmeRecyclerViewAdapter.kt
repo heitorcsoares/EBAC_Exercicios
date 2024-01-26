@@ -46,12 +46,9 @@ class MyfilmeRecyclerViewAdapter(
     override fun getItemCount(): Int = values.size
 
     inner class ViewHolder(private val binding: FragmentItemBinding) : RecyclerView.ViewHolder(binding.root) {
-
-        fun bindItem(item: PlaceholderItem) {
-
-            binding.filmeItem = item
+        fun bindItem(item: PlaceholderItem){
+            binding.filmeItem = item                //filmeItem-> Variavel (fragment_item | Data)
             binding.executePendingBindings()
-
         }
     }
 }
